@@ -1,6 +1,6 @@
 # svc-odin
 
-IBC Paths created and maintained by Defiant Labs. If you want to participate in these paths feel free to use the CONFIGs below.
+IBC Paths maintained by Defiant Labs. If you want to participate in these paths feel free to use the CONFIGs below.
 
 ## Wallets
 
@@ -10,9 +10,10 @@ IBC Paths created and maintained by Defiant Labs. If you want to participate in 
 
 ## Axelar
 
-[client Open]()  
-[connection open]()  
-[channel open]()
+[client Open](https://www.mintscan.io/axelar/txs/E7ED2A81E7F11BAC16A6FB4E212A96FF5371CD57DA2C8E2F9DEAFFCF5F3BB107?height=7460395)  
+[connection open](https://www.mintscan.io/axelar/txs/231BE1FC5AB9556A24C24902F6B8FBA3D8133EE6BAA5B981CA767796F5298391?height=7460403)  
+[channel open](https://www.mintscan.io/axelar/txs/29641FBA3927072C135E899058D13A769B80CD81DA574E02CD45CE4F126C3982?height=7460410)
+[ibc test](https://www.mintscan.io/axelar/txs/C2BE7208CE8007EF3BD1B7827B8CE05F5CB4E73B2A82CE9D5B228D27001E9F0F?height=7460597)
 
 ### GO RELAYER CONFIG
 
@@ -73,19 +74,18 @@ paths:
   mainnet-odin-axelar:
     src:
       chain-id: odin-mainnet-freya
+      client-id: 07-tendermint-66
+      connection-id: connection-51
     dst:
       chain-id: axelar-dojo-1
+      client-id: 07-tendermint-150
+      connection-id: connection-135
     src-channel-filter:
-      rule: ""
-      channel-list: []
+      rule: "allowlist"
+      channel-list: ["channel-37"]
 ```
 
 ## Osmosis
-
-[client Open](https://www.mintscan.io/osmosis/txs/5D16EB498DD8C4EB2AC02EB08960C68AA33B37F13D0D597FD55FB977768EF8AE?height=9706872)  
-[connection open](https://www.mintscan.io/osmosis/txs/7CD116A395C5BDCDEA5A60048004F60F98ADEA49FAA098D99A085F06FB1A6DA1?height=9706886)  
-[channel open](https://www.mintscan.io/osmosis/txs/86A94D43E2E96F7111F1C52DA831DDEE09CA354B283898E2DDCAA388139B0D86?height=9706896)
-[ibc test](https://www.mintscan.io/osmosis/txs/F6317CAEE53DBC8E56AD8153E1CD4051D148BC2DF15DD7333972AAE3930A6EB9?height=9707035)
 
 ### GO RELAYER CONFIG
 
@@ -144,13 +144,13 @@ paths:
   mainnet-odin-osmosis:
     src:
       chain-id: odin-mainnet-freya
-      client-id: 07-tendermint-64
-      connection-id: connection-49
+      client-id: 07-tendermint-10
+      connection-id: connection-9
     dst:
       chain-id: osmosis-1
-      client-id: 07-tendermint-2786
-      connection-id: connection-2286
+      client-id: 07-tendermint-2007
+      connection-id: connection-1551
     src-channel-filter:
       rule: "allowlist"
-      channel-list: ["channel-35"]
+      channel-list: ["channel-3"]
 ```
